@@ -1,49 +1,69 @@
 .experience-section {
-    display: flex;
-    justify-content: center;
-    padding: 50px 80px;
-    background-color: #0d0d0d;
-    color: white;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 40px;
+  display: flex;
+  justify-content: center;
+  padding: 60px 80px;
+  background: #000;
+  color: #fff;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
 }
 
 .experience-left {
-    max-width: 50%;
+  flex: 1 1 50%;
 }
 
 .experience-heading {
-    font-size: 32px;
-    margin-bottom: 20px;
-    font-weight: 500;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
 .experience-description {
-    font-size: 18px;
-    line-height: 1.6;
+  font-size: 16px;
+  color: #ccc;
+  line-height: 1.6;
 }
 
 .experience-right {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    flex-wrap: wrap;
-    text-align: center;
+  flex: 1 1 40%;
+  display: flex;
+  /* gap: 40px; */
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .stat {
-    min-width:310px;
+  perspective: 1000px;
+}
+
+.stat-inner {
+  background: #111;
+  padding: 20px 30px;
+  border-radius: 8px;
+  transform: rotateY(90deg);
+  transform-origin: left;
+  transition: transform 1s ease;
+  min-width: 160px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.stat.flip .stat-inner {
+  transform: rotateY(0deg);
 }
 
 .stat-number {
-    font-size: 28px;
-    font-weight: 600;
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
 }
 
 .stat-label {
-    font-size:24px;
-    margin-top: 8px;
+  font-size: 14px;
+  color: #aaa;
+}
+.stat-box {
+    text-align: center;
 }

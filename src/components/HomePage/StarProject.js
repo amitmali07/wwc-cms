@@ -7,8 +7,8 @@ const ProjectStart = () => {
       <div className="content">
         <h2 className="title">Start a Project</h2>
         <p className="description-start">
-          Korem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.
-          Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+          Whether you’re building a bold new brand, refreshing your packaging, or crafting a digital experience that speaks louder than scrolls, we’re here for it.
+          Tell us where you are. We’ll meet you with ideas.
         </p>
       </div>
       <button className="cta-button">Let’s Collaborate</button>

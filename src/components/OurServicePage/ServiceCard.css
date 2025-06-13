@@ -1,0 +1,87 @@
+.service-wrapper {
+  background-color: #111;  
+  color: white;
+  font-family: 'Inter', sans-serif;
+  padding: 50px 80px;
+}
+
+.service-card {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background 0.3s ease;
+}
+
+.service-card.open {
+  background-color: #0039a6;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.service-index {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.service-line {
+  width: 1px;
+  height: 24px;
+  background: white;
+}
+
+.service-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  flex-grow: 1;
+  padding-left: 0.5rem;
+}
+
+.dropdown-icon {
+  font-size: 0.9rem;
+  margin-left: auto;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.tag {
+  font-weight: 500;
+}
+
+.service-expanded {
+  margin-top: 1.5rem;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  max-width: 90%;
+}
+
+.trusted-client h4 {
+  margin-bottom: 1rem;
+}
+
+.client-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.shape {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 16px;
+}

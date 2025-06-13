@@ -1,0 +1,20 @@
+.cursor-dot {
+  position: fixed;
+  top: 20;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate3d(10, 10, 0);
+  z-index: 9999;
+  transition: background 0.2s;
+}
+
+/* Optional hover effect: enlarge on clickable elements */
+.cursor-dot.hover {
+  background: rgba(0,0,0,0.5);
+  width: 24px;
+  height: 24px;
+}

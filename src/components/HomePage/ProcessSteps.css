@@ -1,0 +1,54 @@
+.process-section {
+    position: relative;
+    height: 40vh;
+    background-color: #2d2d2d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    padding: 50px 80px;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* max-width: 1200px; */
+    z-index: 2;
+    position: relative;
+  }
+  
+  .step {
+    flex: 1;
+    text-align: center;
+    padding: 0 16px;
+    color: #ccc;
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+  }
+  
+  .step h3 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  
+  .step p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  .progress-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: calc(var(--progress, 0) * 100%);
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    z-index: 1;
+    transition: width 0.2s ease-out;
+    pointer-events: none;
+    color: #000;
+  }
+  

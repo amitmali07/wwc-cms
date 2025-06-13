@@ -1,0 +1,126 @@
+/* .hamburger-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 999;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .hamburger-overlay.open {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .left-panel {
+    background: #0d0d0d;
+    color: white;
+    width: 50%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .right-panel {
+    background: #0046BB;
+    color: white;
+    width: 50%;
+    padding: 2rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .menu-logo {
+    height: 30px;
+    margin-bottom: 2rem;
+  }
+  
+  .menu-logo.big {
+    height: 40px;
+    margin: 0 auto 1.5rem;
+  }
+  
+  .nav-columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .column a {
+    display: block;
+    color: white;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .social p {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .icons i {
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .right-panel h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .right-panel p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+  
+  .buttons button {
+    margin: 0 1rem;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 999px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .buttons button:first-child {
+    background: white;
+    color: #0046BB;
+  }
+  
+  .buttons button:last-child {
+    background: white;
+    color: #0046BB;
+  }
+  
+  /* Responsive */
+  /* @media (max-width: 768px) {
+    .hamburger-overlay {
+      flex-direction: column;
+    }
+  
+    .left-panel, .right-panel {
+      width: 100%;
+    }
+  } */
+   

@@ -41,8 +41,41 @@ const serviceData = [
 ];
 
 const DemoService = () => {
+  const containerRef = useRef(null);
+  const indexRef = useRef(0);
+  const isScrolling = useRef(false);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const items = container.querySelectorAll(".demo-service-item");
+
+    const onWheel = (e) => {
+      if (isScrolling.current) return;
+
+      const direction = e.deltaY > 0 ? 1 : -1;
+      let newIndex = indexRef.current + direction;
+
+      if (newIndex < 0 || newIndex >= items.length) return;
+
+      e.preventDefault();
+      indexRef.current = newIndex;
+      const scrollTo = items[newIndex].offsetTop - 80;
+      isScrolling.current = true;
+
+      window.scrollTo({ top: scrollTo, behavior: "smooth" });
+
+      setTimeout(() => {
+        isScrolling.current = false;
+      }, 800); // control scroll speed
+    };
+
+    window.addEventListener("wheel", onWheel, { passive: false });
+    return () => window.removeEventListener("wheel", onWheel);
+  }, []);
+
   return (
-    <div style={{ background: "#0f0f0f", minHeight: "100vh", color: "#fff" }}>
+    <div className="demo-service-wrapper" ref={containerRef}>
+      <h1 className="demo-service-heading">Our Services</h1>
       {serviceData.map((item, idx) => (
         <AnimatedService key={idx} {...item} />
       ))}
@@ -57,12 +90,9 @@ const AnimatedService = ({ number, title, points = [], image }) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(ref.current);
-        }
+        setIsVisible(entry.isIntersecting);
       },
-      { threshold: 0.2 }
+      { threshold: 0.6 }
     );
 
     if (ref.current) observer.observe(ref.current);

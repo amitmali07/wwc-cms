@@ -1,79 +1,83 @@
-.service-container {
-  position: relative;
-  width: 100%;
+/* ServiceList.css */
+.service-list {
+  background: #111;
+  /* padding: 60px 80px; */
+  display: flex;
+  flex-direction: column;
+  /* gap: 40px; */
+  color: #fff;
 }
 
-.section {
+.service-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 80px 80px;
-  height: 20vh;
-  background-color: #181818;
-  color: white;
-  opacity: 0.2;
-  position: sticky;
-  top: 0;
-  transition: background 0.5s ease, opacity 0.5s ease;
-  border-bottom: 1px solid #444;
+  align-items: flex-start;
+  border-top: 1px solid #333;
+  padding: 40px 80px;
+  position: relative;
 }
 
-.service-tn {
+.service-left {
+  flex: 1;
+}
+
+.service-heading {
   display: flex;
-  gap: 20px;
-}
-
-.section.active {
-  opacity: 1;
-  background-color: #181818;
-}
-
-.text {
-  max-width: 60%;
-}
-
-.text .number {
-  font-size: 25px;
-  margin-bottom: 10px;
-  color: #ccc;
-}
-
-.text .title {
-  font-size: 24px;
-  font-weight: bold;
+  align-items: center;
+  gap: 16px;
+  font-size: 20px;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
-.text .services,
-.text .subservices {
+.service-number {
+  font-size: 24px;
+  color: #999;
+}
+
+.service-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.service-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
-  font-size: 14px;
+  gap: 12px;
+  max-width: 100%;
+}
+
+.service-tag {
+  background: #222;
   color: #ccc;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  white-space: nowrap;
 }
 
-.image img {
-  max-width: 150px;
-  height: auto;
-  /* border: 1px solid #ddd; */
-  /* border-radius: 8px; */
+.service-left .service-tags {
+  max-width: 60%;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .section {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 60px 20px;
-  }
+.service-right {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
 
-  .text {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
+.service-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+}
 
-  .image img {
-    max-width: 100px;
-  }
+.service-arrow {
+  display: none;
 }

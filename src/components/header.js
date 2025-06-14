@@ -28,7 +28,7 @@ export default function Header() {
       const scrolled = (scrollTop / docHeight) * 100;
       setScrollPercent(scrolled);
     };
-    
+
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -38,7 +38,7 @@ export default function Header() {
     <div className="header">
       {/* Logo & Auto Slider */}
       <div className="logo-container">
-       <a href='./Home'> <img src={logo} alt="Logo" /> </a><span>|</span>
+        <a href='./Home'> <img src={logo} alt="Logo" /> </a><span>|</span>
         <div className="vertical-text">
           <motion.p
             key={currentSlide}
@@ -94,16 +94,16 @@ export default function Header() {
                 <img src={logo} alt="Logo" />
                 <div className="links">
                   <div className="hamenu">
-                    <NavLink to="/Home" exact="true" activeclassname="active">Home</NavLink>
-                    <NavLink to="/OurService" activeclassname="active">Service</NavLink>
-                    <NavLink to="/Project" activeclassname="active">Project</NavLink>
-                    <NavLink to="/Process" activeclassname="active">Process</NavLink>
-                    <NavLink to="/Us" activeclassname="active">Us</NavLink>
+                    <NavLink to="/Home" onClick={() => setIsOpen(false)}>Home</NavLink>
+                    <NavLink to="/OurService" onClick={() => setIsOpen(false)}>Service</NavLink>
+                    <NavLink to="/Project" onClick={() => setIsOpen(false)}>Project</NavLink>
+                    <NavLink to="/Process" onClick={() => setIsOpen(false)}>Process</NavLink>
+                    <NavLink to="/Us" onClick={() => setIsOpen(false)}>Us</NavLink>
                   </div>
                   <div className="hamenu1">
-                    <NavLink to="/ContactUs" exact="true" activeclassname="active">Contact</NavLink>
-                    <NavLink to="/Career" activeclassname="active">Career</NavLink>
-                    <NavLink to="/blog" activeclassname="active">Blog</NavLink>
+                    <NavLink to="/ContactUs" onClick={() => setIsOpen(false)}>Contact</NavLink>
+                    <NavLink to="/Career" onClick={() => setIsOpen(false)}>Career</NavLink>
+                    <NavLink to="/blog" onClick={() => setIsOpen(false)}>Blog</NavLink>
                   </div>
                 </div>
               </div>

@@ -1,61 +1,87 @@
+.demo-service-wrapper {
+  position: relative;
+  background-color: #0f0f0f;
+  color: #fff;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.demo-service-heading {
+  position: sticky;
+  top: 0;
+  background: #0f0f0f;
+  padding: 40px 80px 20px;
+  font-size: 32px;
+  z-index: 10;
+}
+
 .demo-service-item {
+  position: sticky;
+  top: 120px;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #2a2a2a;
-  padding: 50px 80px;
+  padding: 60px 80px;
   opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+  background-color: #0f0f0f;
 }
 
 .demo-service-item.animate-in {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0px);
+  z-index: 2;
 }
 
 .demo-left {
   flex: 1;
+  max-width: 60%;
 }
 
 .demo-number {
-  color: #a0a0a0;
+  color: #888;
   font-weight: 500;
-  margin-right: 10px;
+  margin-right: 12px;
+  font-size: 20px;
 }
 
 .demo-title {
+  font-size: 24px;
   font-weight: 600;
-  font-size: 18px;
 }
 
 .demo-points {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 10px;
-  color: #cccccc;
+  gap: 10px;
+  margin-top: 12px;
   font-size: 14px;
+  color: #ccc;
+  max-width: 80%;
 }
 
 .point {
+  background-color: #1c1c1c;
+  padding: 6px 12px;
+  border-radius: 6px;
   white-space: nowrap;
 }
 
 .demo-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-shrink: 0;
 }
 
 .icon-box {
   background: #fff;
-  padding: 10px;
   width: 80px;
   height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .icon-box img {

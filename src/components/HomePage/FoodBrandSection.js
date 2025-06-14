@@ -6,14 +6,15 @@ const FoodBrandSection = () => {
   return (
     <section className="food-brand-section">
       <div className="content-left">
-        <h2 className="headline">Designing the Future of Food Brands</h2>
+        <h2 className="headline">First Impressions Don’t Get a Second Chance.</h2>
         <div className="description-foodbrand">
-          <h4>What We Do for Food Brands:</h4>
-          <ul>
-            <li>Package that sells: Designs that make your products pop off the shelf (or the screen).</li>
-            <li>Branding that connects: Build trust with designs that resonate with food lovers.</li>
-            <li>Campaigns that make noise: 360° campaigns for launches, seasonal pushes, or everyday buzz.</li>
-          </ul>
+          <p>
+            At White Warbler Communications, a leading creative packaging design agency in Pune, we create FMCG packaging that builds memory, 
+            not just visibility. From custom product packaging design to complete packaging for FMCG brands, every label, layout, 
+            and fold is crafted to rise above cluttered shelves and click-happy carts. Whether it's a nostalgic namkeen or a next-gen superfood, 
+            our packaging design solutions blend culture, clarity, and commerce, turning everyday products into shelf-smart, emotionally sticky brands.
+            Because good packaging doesn’t just sell. It speaks. And it stays.
+          </p>
         </div>
       </div>
       <div className="content-right">

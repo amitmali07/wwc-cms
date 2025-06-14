@@ -10,6 +10,7 @@ import AboutUs from './components/AboutUs/Us';
 import Career from './components/CareerPage/Career';
 import WorkDetails from './components/WorkPage/WorkDetails';
 import Work from './components/WorkPage/Work';
+import ScrollToTop from './components/ScrollToTop';
 // import CursorFollower from './components/CursorFollower';
  
 
@@ -18,6 +19,7 @@ function App() {
   return (
     <div>
       {/* <CursorFollower /> */}
+      <ScrollToTop />
       <Header />
         <Routes>
           <Route path="/" element={<Home />} />

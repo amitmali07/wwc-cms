@@ -20,32 +20,55 @@ const works = [
 
 export default function SelectedWorks() {
   const containerRef = useRef();
+  const isScrolling = useRef(false);
+  const scrollDirection = useRef('down');
 
   const handleWheel = useCallback((e) => {
     const container = containerRef.current;
-    if (!container.matches(':hover')) return;
+    if (!container) return;
 
     e.preventDefault();
-    const delta = e.deltaY * 4; // adjust speed
-    container.scrollLeft += delta;
 
-    // when scroll has reached the end, auto-scroll to next section
-    if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 2) {
-      window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+    if (!isScrolling.current) {
+      isScrolling.current = true;
+      const delta = e.deltaY;
+      const isAtStart = container.scrollLeft <= 0;
+      const isAtEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 1;
+
+      const scrollSpeed = container.clientWidth; // Increase speed by using full width
+
+      if (delta > 0 && !isAtEnd) {
+        container.scrollBy({ left: scrollSpeed, behavior: 'smooth' });
+        scrollDirection.current = 'down';
+      } else if (delta < 0 && !isAtStart) {
+        container.scrollBy({ left: -scrollSpeed, behavior: 'smooth' });
+        scrollDirection.current = 'up';
+      } else if (delta > 0 && isAtEnd) {
+        window.scrollBy({ top: window.innerHeight, behavior: 'smooth' });
+      } else if (delta < 0 && isAtStart) {
+        window.scrollBy({ top: -window.innerHeight, behavior: 'smooth' });
+      }
+
+      setTimeout(() => {
+        isScrolling.current = false;
+      }, 400);
     }
   }, []);
 
   useEffect(() => {
-    window.addEventListener('wheel', handleWheel, { passive: false });
-    return () => window.removeEventListener('wheel', handleWheel);
+    const container = containerRef.current;
+    if (!container) return;
+
+    container.addEventListener('wheel', handleWheel, { passive: false });
+    return () => container.removeEventListener('wheel', handleWheel);
   }, [handleWheel]);
 
   return (
     <section className="selected-works-section">
       <h2 className="section-title">| Selected Works</h2>
       <div className="scroll-container" ref={containerRef}>
-        {works.map(w => (
-          <div key={w.id} className="work-card">
+        {works.map((w, index) => (
+          <div key={w.id} className="work-card" style={{ animationDelay: `${index * 0.1}s` }}>
             <img src={w.image} alt={`Work ${w.id}`} />
             <div className="btn-wrapper">
               <button className="work-btn">Show More</button>
